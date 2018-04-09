@@ -1,0 +1,19 @@
+<!-- templates/home.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Welcome to the Homepage</h1>
+<p>Users:</p>
+<ul>
+{% for myuser in myuser_list %}
+    <li>
+        User {{ myuser.id }}
+        - {{ myuser.email }}
+        - <a href="/users/{{myuser.id}}">Profile</a>
+    </li>
+{% empty %}
+    <li>No users yet.</li>
+{% endfor %}
+</ul>
+
+{% endblock %}
