@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from blog.models import MyUser
+from profiles.models import MyUser
 from django.http import HttpResponse
 from django.views.generic import TemplateView, View, ListView
 
